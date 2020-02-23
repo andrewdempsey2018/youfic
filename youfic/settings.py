@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     
     # Import the pre-made accounts app
     'accounts',
+    # Forms Bootstrap used in accounts app
+    'django_forms_bootstrap',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'youfic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
