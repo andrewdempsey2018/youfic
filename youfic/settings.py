@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'accounts',
     # Forms Bootstrap used in accounts app
     'django_forms_bootstrap',
+
+    # Import the story app, deals with story models and views
+    'story',
 ]
 
 MIDDLEWARE = [
