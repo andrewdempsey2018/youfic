@@ -47,6 +47,9 @@ INSTALLED_APPS = [
 
     # Import the story app, deals with story models and views
     'story',
+
+    # Import the donate app to allow payments
+    'donate',
 ]
 
 MIDDLEWARE = [
