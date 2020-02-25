@@ -127,6 +127,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Additional static files
+
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, "static"),
+]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+#STRIPE_SECRET = os.getenv('STRIPE_SECRET')
+
 # *** TOD0 *** rewatch auth tutorial and see what this code is for
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend', 
