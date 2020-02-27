@@ -1,0 +1,1 @@
+web: gunicorn neostore.wsgi:application

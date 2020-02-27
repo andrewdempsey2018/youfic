@@ -17,12 +17,11 @@ import env
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Get the secret key from the OS enviornment
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(si#82rn#fs!gqv8-#c@4)#_k53@^s0-pj#awsd!@o*25sc$7o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
