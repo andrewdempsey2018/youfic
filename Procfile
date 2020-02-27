@@ -1,1 +1,1 @@
-web: gunicorn neostore.wsgi:application
+web: gunicorn youfic.wsgi:application
