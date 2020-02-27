@@ -26,6 +26,9 @@ An attractive one page Bootstrap theme perfect for creative portfolios and busin
 
 *Image 1. The Creative theme*
 
+Image of Stripe payments made sucsessfully
+
+aaa
 **Portfolio Item**
 
 A simple portfolio item details page example built with Bootstrap 4. Used for dedicated item screen.
