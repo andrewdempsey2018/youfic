@@ -1,17 +1,26 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Index</h1>
-</body>
-</html> -->
-
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Story rory</h1>
+
+{% block cards %}
+{% for story in stories %}
+<div class="col-lg-4 col-md-6 mb-4">
+    
+    <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{ story.image.url }}" alt="{{ story.tite }} _image"></a>
+        <div class="card-body">
+            <h4 class="card-title">
+            </h4>
+            <h5>{{ story.author }}</h5>
+            <p class="card-text">{{ story.description }}</p>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-outline-primary">Read</button>
+        </div>
+    </div>
+    
+</div>
+{% endfor %}
+{% endblock %}
+
 {% endblock %}

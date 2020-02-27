@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Import the Part model for use
-#from .models import Part
+# Import the Story model for use
+from .models import Story
 
 def index(request):
-    return render(request, 'story/index.html')
+    # Query the database and pull out a set of all the stories it contains
+    stories = Story.objects.all()
+    # Pass the set of stories to the 'index' template
+    return render(request, 'story/index.html', { 'stories': stories })
