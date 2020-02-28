@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Donate baby</h1>
+<h1>Donate</h1>
 
-<form action="/your-name/" method="post">
+<form action="" method="POST">
     {% csrf_token %}
     {{  form  }}
-    <input type="submit" value="Submit">
+    <input type="submit" value="Donate">
 </form>
 
 

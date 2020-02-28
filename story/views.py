@@ -37,8 +37,8 @@ def read(request):
     return render(request, "story/read.html", {"story": story})
 
 
-def submit(request):
-    return render(request, "story/submit.html")
+#def submit(request):
+ #   return render(request, "story/submit.html")
 
 def submit(request):
     if request.method == "POST":
