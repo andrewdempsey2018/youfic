@@ -1,5 +1,9 @@
 # YouFic #
 
+## Integration status ##
+
+[![Build Status](https://travis-ci.com/andrewdempsey2018/youfic.svg?branch=master)](https://travis-ci.com/andrewdempsey2018/youfic)
+
 YouFic, short for "You Fiction", is a website that facilitates the sharing of short fiction works by aspiring writers. All visitors to the web site can browse the available works and filter them by genre. If a visitor registers and has logged in, that user will have the ability to upload their own content to the website.
 
 ## UX ##
