@@ -12,11 +12,12 @@
         <div class="card-body">
             <h4 class="card-title">
             </h4>
-            <h5>{{ story.author }}</h5>
+            <h5>{{ story.title }}</h5>
             <p class="card-text">{{ story.description }}</p>
         </div>
         <div class="card-footer">
-            <button type="button" class="btn btn-outline-primary">Read</button>
+            <p class="card-text">By {{ story.author }}</p>
+            <a href="{% url 'read' %}?id={{ story.id }}" class="list-group-item">Read</a>
         </div>
     </div>
     
