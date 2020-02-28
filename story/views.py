@@ -9,3 +9,23 @@ def index(request):
     stories = Story.objects.all()
     # Pass the set of stories to the 'index' template
     return render(request, 'story/index.html', { 'stories': stories })
+
+def adventure(request):
+    stories = Story.objects.filter(category='Adventure')
+    return render(request, 'story/index.html', { 'stories': stories })
+
+def fantasy(request):
+    stories = Story.objects.filter(category='Fantasy')
+    return render(request, 'story/index.html', { 'stories': stories })
+
+def mystery(request):
+    stories = Story.objects.filter(category='Mystery')
+    return render(request, 'story/index.html', { 'stories': stories })
+
+def scifi(request):
+    stories = Story.objects.filter(category='SciFi')
+    return render(request, 'story/index.html', { 'stories': stories })
+
+def read(request):
+    story = Story.objects.get(id=request.GET.get('id'))
+    return render(request, 'story/read.html', { 'story': story })
