@@ -29,3 +29,6 @@ def scifi(request):
 def read(request):
     story = Story.objects.get(id=request.GET.get('id'))
     return render(request, 'story/read.html', { 'story': story })
+
+def submit(request):
+    return render(request, 'story/submit.html')
