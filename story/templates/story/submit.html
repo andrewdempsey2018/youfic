@@ -12,9 +12,11 @@
 
 {% block submitstory %}
 <div class="container">
-<form action="" method="POST">
-    {% csrf_token %}
     
+    {% if user.is_authenticated %}
+    <form action="" method="POST">
+        {% csrf_token %}
+
         <div class="row">
             <div class="col">
                 <label for="title">Story title</label>
@@ -33,24 +35,28 @@
             </div>
         </div>
 
-    <div>
-        <label for="category">Select Category</label>
-        <select class="form-control" name="category">
-            <option>Adventure</option>
-            <option>Fantasy</option>
-            <option>Mystery</option>
-            <option>SciFi</option>
-        </select>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <label for="text">Story</label>
-            <textarea class="form-control" id='text' name="text"" rows="5"></textarea>
+        <div>
+            <label for="category">Select Category</label>
+            <select class="form-control" name="category">
+                <option>Adventure</option>
+                <option>Fantasy</option>
+                <option>Mystery</option>
+                <option>SciFi</option>
+            </select>
         </div>
-    </div>
 
-    <button type="submit" class="btn btn-success">Publish story to site</button>
-</form>
+        <div class="row">
+            <div class="col">
+                <label for="text">Story</label>
+                <textarea class="form-control" id='text' name="text"" rows=" 5"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Publish story to site</button>
+    </form>
+    {% else %}
+    <h2>Only registered users may submit stories</h2>
+    <a class="nav-link" href="{% url 'registration' %}">Register</a>
+    {% endif %}
 </div>
 {% endblock %}

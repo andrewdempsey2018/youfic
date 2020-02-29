@@ -153,9 +153,15 @@
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
+    {% if user.is_authenticated %}
     <div class="container">
-      <p class="m-0 text-center text-white">YouFic Social Media Links</p>
+      <h3 class="m-0 text-center text-white">Currently logged in as {{ user.username }}</h3>
     </div>
+    {% else %}
+    <div class="container">
+      <h3 class="m-0 text-center text-white">Browsing as Guest</h3>
+    </div>
+    {% endif %}
     <!-- /.container -->
   </footer>
 
