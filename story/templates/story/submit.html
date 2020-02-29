@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
-{% block content %}
+
 
 <h1>Submit</h1>
 
+{% block carousel %}
+{% endblock %}
+
+{% block sidenav %}
+{% endblock %}
+
+{% block submitstory %}
+<div class="container">
 <form action="" method="POST">
     {% csrf_token %}
-    <div class="container">
+    
         <div class="row">
             <div class="col">
                 <label for="title">Story title</label>
@@ -24,7 +32,6 @@
                     placeholder="enter a short description of the story">
             </div>
         </div>
-    </div>
 
     <div>
         <label for="category">Select Category</label>
@@ -45,5 +52,5 @@
 
     <input type="submit" value="Submit story"/>
 </form>
-
+</div>
 {% endblock %}

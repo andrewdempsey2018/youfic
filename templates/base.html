@@ -23,7 +23,7 @@
   <link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'css/megamenu.css' %}">
-  
+
 </head>
 
 <body>
@@ -69,15 +69,12 @@
     </div>
   </nav>
 
-  <div>
-    {% block content %}{% endblock %}
-  </div>
-
   <!-- Page Content -->
   <div class="container">
 
     <div class="row">
 
+      {% block sidenav %}
       <div class="col-lg-3">
 
         <h1 class="my-4 main_title_text">YouFic</h1>
@@ -91,9 +88,11 @@
 
       </div>
       <!-- /.col-lg-3 -->
+      {% endblock %}
 
       <div class="col-lg-9">
 
+        {% block carousel %}
         <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -123,9 +122,16 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        {% endblock %}
 
         <div class="row">
           {% block cards %}
+          {% endblock %}
+
+          {% block submitstory %}
+          {% endblock %}
+
+          {% block donateform %}
           {% endblock %}
         </div>
         <!-- /.row -->
