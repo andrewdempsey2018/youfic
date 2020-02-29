@@ -288,6 +288,10 @@ Test 4. Donate page tests
 16. The payment should be processed
 17. The user should be redirected to a 'thank you' page
 
+**Successful stripe payments**
+
+Here we can see that the donate functionality is working. Stripe.com offers account holders a summary of all transactions on their account. Although the payments shown here are tests, if a real card were used, real money would be transferred.
+
 ![Stripe Payments Screenshot](readme_files/stripepayments.png)
 
 *Image... Screenshot of Stripe.com showing successful payments.*
@@ -327,6 +331,18 @@ Test 6 Submit page tests
 15. The story should no be available for reading
 
 **Testing on various devices / emulators / browsers**
+
+The site running on a desktop computer running Chrome:
+
+![Chrome](readme_files/chromedesktop.png)
+
+*Image... Chrome browser rendering the website*
+
+The site running on an android phone (emulated):
+
+![Chrome](readme_files/galaxy.png)
+
+*Image... Samsung Galaxy rendering the website*
 
 **Bugs found / issues**
 

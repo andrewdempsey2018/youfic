@@ -17,7 +17,7 @@
         </div>
         <div class="card-footer">
             <p class="card-text">By {{ story.author }}</p>
-            <a href="{% url 'read' %}?id={{ story.id }}" class="list-group-item">Read</a>
+            <a class="btn btn-outline-success" href="{% url 'read' %}?id={{ story.id }}" role="button">Read</a>
         </div>
     </div>
 
