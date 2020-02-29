@@ -4,27 +4,39 @@
 
 [![Build Status](https://travis-ci.com/andrewdempsey2018/youfic.svg?branch=master)](https://travis-ci.com/andrewdempsey2018/youfic)
 
-YouFic, short for "You Fiction", is a website that facilitates the sharing of short fiction works by aspiring writers. All visitors to the web site can browse the available works and filter them by genre. If a visitor registers and has logged in, that user will have the ability to upload their own content to the website.
-
-## UX ##
+YouFic, short for "You Fiction", is a website that facilitates the sharing of The name "YouFic" (short for You "Fiction") is a play on the title of the very popular website "YouTube". With YouTube, users can upload their own videos for all to see. YouFic offers a similar service for people who want to share their fiction stories with the world.
 
 ## Website Goal ##
+
+The goal of the website is to provide a central place where readers of fiction can access the latest user created stories. It also aims to be a place where aspiring writers could potentially get noticed by publishers.
+
+The website is designed to be pleasant to use on both desktop and mobile devices. This dual functionality is achieved through the use of responsive design principles.
+
+## UX ##
 
 ## User Stories ##
 
 **User story 1:**
 
+As a regular reader of fiction, I would like to browse the stories available and quickly select the one I am interested in. The short descriptions featured on the website for each story helped me select the stories I was interested in.
+
 **User story 2:**
+
+As a fan of science fiction, I would like to filter my browsing session to only display science fiction stories. I was able to use the websites category links to achieve this.
 
 **User story 3:**
 
+As an aspiring writer, I would like a service where I can quickly and easily publish my work and build a name for myself. After registering with the website, I was able to submit my stories for all to read.
+
 **User story 4:**
+
+As a fan of amateur fiction, I like that there is a resource for writers and fans to consume and create content. I was able to support the website by clicking on the donate link and helping pay for the upkeep of the website.
 
 **Wireframes**
 
 **Creative**
 
-An attractive one page Bootstrap theme perfect for creative portfolios and businesses
+An attractive one page Bootstrap theme perfect fpor creative portfolios and businesses
 
 ![](assets/readme/creative.png)
 
@@ -161,11 +173,13 @@ Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) 
 
 **SQLite3**
 
+**Pencil**
+
 ## Testing
 
-**Testing with Jasmine?**
-
 **Continuous testing with Travis**
+
+
 
 **Testing models with Django test framework**
 

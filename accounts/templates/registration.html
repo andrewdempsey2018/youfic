@@ -1,14 +1,22 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
 
-{% block page_title %}Registration Page{% endblock %}
-{% block page_heading %}User registration{% endblock %}
+<h1>Login</h1>
 
-{% block content %}
-<p>If you already have an account you can <a href="{% url 'login' %}">sign in</a></p>
+{% block carousel %}
+{% endblock %}
+
+{% block sidenav %}
+{% endblock %}
+
+{% block register %}
+
+
 
 <form method="POST">
+    <label>If you already have an account you can <a href="{% url 'login' %}">Sign In</a></label>
     {% csrf_token %}
-    {{ registration_form.as_p }}
-    <button type="submit">Register</button>
+    {{ registration_form|as_bootstrap }}
+    <button type="submit" class="btn btn-success">Register</button>
 </form>
 {% endblock %}
