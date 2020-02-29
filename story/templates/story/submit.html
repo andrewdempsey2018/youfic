@@ -18,17 +18,17 @@
         <div class="row">
             <div class="col">
                 <label for="title">Story title</label>
-                <input type="text" class="form-control-plaintext" name="title" placeholder="enter your story title">
+                <input type="text" class="form-control" name="title" placeholder="enter your story title">
             </div>
             <div class="col">
                 <label for="author">Your name</label>
-                <input type="text" class="form-control-plaintext" name="author" placeholder="enter your name">
+                <input type="text" class="form-control" name="author" placeholder="enter your name">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label for="description">Story description</label>
-                <input type="text" class="form-control-plaintext" name="description"
+                <input type="text" class="form-control" name="description"
                     placeholder="enter a short description of the story">
             </div>
         </div>
@@ -46,11 +46,11 @@
     <div class="row">
         <div class="col">
             <label for="text">Story</label>
-            <input type="textarea" class="form-control-plaintext" name="text" placeholder="type your story here">
+            <textarea class="form-control" id='text' name="text"" rows="5"></textarea>
         </div>
     </div>
 
-    <input type="submit" value="Submit story"/>
+    <button type="submit" class="btn btn-success">Publish story to site</button>
 </form>
 </div>
 {% endblock %}
