@@ -47,7 +47,7 @@ def submit(request):
             story.text = request.POST.get("text")
             story.save()
 
-            return render(request, "story/submit.html")
+            return render(request, "index.html")
 
     else:
         return render(request, "story/submit.html")
