@@ -1,0 +1,9 @@
+/* Additional styles for "YouFic" website by Andrew Dempsey */
+
+/* import additional fonts from an external source for use with website */
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+/* Main YouFic title text on index page */
+.main_title_text {
+    font-family: 'Pacifico', sans-serif;
+}

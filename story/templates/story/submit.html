@@ -1,32 +1,49 @@
-<html>
+{% extends 'base.html' %}
 
-<head>
-    <title>Submit a story </title>
-</head>
+{% block content %}
 
-<body>
-    <h1>Submit a story </h1>
-    <form action="" method="POST">
-        {% csrf_token %}
+<h1>Submit</h1>
 
-        Title:
-        <input type="text" name="title" />
-        Author:
-        <input type="text" name="author" />
-        Description:
-        <textarea cols="35" rows="8" name="description"></textarea>
-        Category:
-        <select name="category" id="category">
-            <option value="Adventure">Adventure</option>
-            <option value="Fantasy">Fantasy</option>
-            <option value="Mystery">Mystery</option>
-            <option value="SciFi">Scifi</option>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="title">Story title</label>
+                <input type="text" class="form-control-plaintext" name="title" placeholder="enter your story title">
+            </div>
+            <div class="col">
+                <label for="author">Your name</label>
+                <input type="text" class="form-control-plaintext" name="author" placeholder="enter your name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="description">Story description</label>
+                <input type="text" class="form-control-plaintext" name="description"
+                    placeholder="enter a short description of the story">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label for="category">Select Category</label>
+        <select class="form-control" name="category">
+            <option>Adventure</option>
+            <option>Fantasy</option>
+            <option>Mystery</option>
+            <option>SciFi</option>
         </select>
-        Text:
-        <textarea cols="35" rows="8" name="text"></textarea>
+    </div>
 
-        <input type="submit" value="Submit story" />
-    </form>
-</body>
+    <div class="row">
+        <div class="col">
+            <label for="text">Story</label>
+            <input type="textarea" class="form-control-plaintext" name="text" placeholder="type your story here">
+        </div>
+    </div>
 
-</html>
+    <input type="submit" value="Submit story"/>
+</form>
+
+{% endblock %}
