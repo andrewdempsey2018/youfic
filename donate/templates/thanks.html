@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% extends 'base.html' %}
 
-</head>
-<body>
-    <h2>Thanks!</h2>
-    <a class="nav-link" href="{% url 'index' %}">Go to home page</a>
-</body>
-</html>
+{% block thanks %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Thanks for the donation!</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h3>Your help keeps the site going!</h3>
+    </div>
+</div>
+{% endblock %}

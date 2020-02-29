@@ -2,27 +2,25 @@
 
 <script src="https://js.stripe.com/v3/"></script>
 
-{% block carousel %}
-{% endblock %}
 
-{% block sidenav %}
-{% endblock %}
 
 {% block donateform %}
-<h1>Donate</h1>
 
 <div class="container">
     <div class="row">
-<h2>Donate €5 for the upkeep of YouFic</h2>
+        <div class="col">
+            <h3>Donate €5 for the upkeep of YouFic</h3>
+        </div>
     </div>
     <div class="row">
-<form action="{% url 'thanks' %}" method="post">
-    {% csrf_token %}
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ key }}"
-        data-description="Donation to YouFic" data-amount="500" data-locale="auto">
-    </script>
-</form>
+        <div class="col">
+            <form action="{% url 'thanks' %}" method="post">
+                {% csrf_token %}
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ key }}"
+                    data-description="Donation to YouFic" data-amount="500" data-locale="auto">
+                </script>
+            </form>
+        </div>
+    </div>
 </div>
-</div>
-
 {% endblock %}

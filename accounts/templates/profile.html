@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
 
-{% block page_title %} {{ user }}'s profile {% endblock %}
-{% block page_heading %} {{ user }}'s profile {% endblock %}
-
-{% block content %}
-<p>{{ profile.email }}</p>
-{% endblock %}
+{% block profileinfo %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Welcome {{ profile.username }}</h2>
+            <hr>
+            <h3>Here are your profile details:</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4>Your registered Email: {{ profile.email }}</h4>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4>Your username: {{ profile.username }}</h4>
+        </div>
+    </div>
+    {% endblock %}

@@ -3,16 +3,22 @@
 
 <h1>Login</h1>
 
-{% block carousel %}
-{% endblock %}
-
-{% block sidenav %}
-{% endblock %}
-
 {% block login %}
-<form method="POST">
-    {% csrf_token %}
-    {{ login_form|as_bootstrap }}
-    <button type="submit" class="btn btn-success">Login</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>Please enter your details and click login</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <form method="POST">
+                {% csrf_token %}
+                {{ login_form|as_bootstrap }}
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

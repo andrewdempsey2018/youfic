@@ -1,18 +1,8 @@
 {% extends 'base.html' %}
 
-
-
-<h1>Submit</h1>
-
-{% block carousel %}
-{% endblock %}
-
-{% block sidenav %}
-{% endblock %}
-
 {% block submitstory %}
 <div class="container">
-    
+
     {% if user.is_authenticated %}
     <form action="" method="POST">
         {% csrf_token %}
@@ -54,9 +44,22 @@
 
         <button type="submit" class="btn btn-success">Publish story to site</button>
     </form>
-    {% else %}
-    <h2>Only registered users may submit stories</h2>
-    <a class="nav-link" href="{% url 'registration' %}">Register</a>
-    {% endif %}
 </div>
+{% else %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Only registered users may submit stories</h2>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h4>Click the register link at the top of the page to become a member</h4>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 {% endblock %}
