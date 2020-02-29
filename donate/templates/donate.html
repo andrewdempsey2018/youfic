@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
+<script src="https://js.stripe.com/v3/"></script>
+
 {% block content %}
 <h1>Donate</h1>
 
-<form action="" method="POST">
+<h2>Donate €5 for the upkeep of YouFic</h2>
+<form action="{% url 'thanks' %}" method="post">
     {% csrf_token %}
-    {{  form  }}
-    <input type="submit" value="Donate">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ key }}"
+        data-description="Donation to YouFic" data-amount="500" data-locale="auto">
+    </script>
 </form>
-
 
 {% endblock %}
