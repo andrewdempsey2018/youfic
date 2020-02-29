@@ -36,16 +36,15 @@ def read(request):
     story = Story.objects.get(id=request.GET.get("id"))
     return render(request, "story/read.html", {"story": story})
 
-
-#def submit(request):
- #   return render(request, "story/submit.html")
-
 def submit(request):
     if request.method == "POST":
-        if request.POST.get("title") and request.POST.get("author"):
+        if request.POST.get("title") and request.POST.get("author") and request.POST.get("description") and request.POST.get("category") and request.POST.get("text"):
             story = Story()
             story.title = request.POST.get("title")
             story.author = request.POST.get("author")
+            story.description = request.POST.get("description")
+            story.category = request.POST.get("category")
+            story.text = request.POST.get("text")
             story.save()
 
             return render(request, "story/submit.html")

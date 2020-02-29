@@ -8,10 +8,23 @@
     <h1>Submit a story </h1>
     <form action="" method="POST">
         {% csrf_token %}
-        Title: <input type="text" name="title" /><br />
-        Author: <br />
-        <textarea cols="35" rows="8" name="author">
-</textarea><br />
+
+        Title:
+        <input type="text" name="title" />
+        Author:
+        <input type="text" name="author" />
+        Description:
+        <textarea cols="35" rows="8" name="description"></textarea>
+        Category:
+        <select name="category" id="category">
+            <option value="Adventure">Adventure</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Mystery">Mystery</option>
+            <option value="SciFi">Scifi</option>
+        </select>
+        Text:
+        <textarea cols="35" rows="8" name="text"></textarea>
+
         <input type="submit" value="Submit story" />
     </form>
 </body>

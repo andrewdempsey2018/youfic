@@ -16,7 +16,7 @@ class Story(models.Model):
     title = models.CharField(max_length=30, default="")
     author = models.CharField(max_length=30, default="")
     description = models.TextField(max_length=60, default="")
-    image = models.ImageField(upload_to="images")
+    image = models.ImageField(upload_to = 'images/', default = 'images/noimage.png')
     category = models.CharField(max_length=9, choices=CATEGORYS, default=ADVENTURE)
     text = models.TextField(max_length=3000, default="")
     published = models.DateTimeField(auto_now=True)
