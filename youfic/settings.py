@@ -131,6 +131,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Media ROOT settings
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -144,8 +147,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles"),
 ]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # *** TOD0 *** rewatch auth tutorial and see what this code is for
 AUTHENTICATION_BACKENDS = [
