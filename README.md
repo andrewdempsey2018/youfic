@@ -21,6 +21,9 @@ The goal of the website is to provide a central place where readers of fiction c
 
 The website is designed to be pleasant to use on both desktop and mobile devices. Good user experience on mobile devices is essential as many many people read whilst on the move on-board public transport etc. This dual functionality is achieved through the use of responsive design principles.
 
+----------
+----------
+
 ## UX ##
 
 ## User Stories ##
