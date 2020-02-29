@@ -1,8 +1,17 @@
 # YouFic #
 
-## Integration status ##
+
+----------
+
+
+*Integration status*
 
 [![Build Status](https://travis-ci.com/andrewdempsey2018/youfic.svg?branch=master)](https://travis-ci.com/andrewdempsey2018/youfic)
+
+
+----------
+
+## About ##
 
 YouFic, short for "You Fiction", is a website that facilitates the sharing of user created fiction stories. The name "YouFic" (short for You "Fiction") is a play on the title of the iconic website "YouTube". With YouTube, users can upload videos created by themselves for all to see. YouFic offers a similar service for people who want to share their fiction stories with the world.
 
@@ -34,26 +43,45 @@ As a fan of amateur fiction, I like that there is a resource for writers and fan
 
 **Wireframes**
 
-**Creative**
+**Main index page wireframe**
 
-An attractive one page Bootstrap theme perfect fpor creative portfolios and businesses
+Here we see the main layout to be used throughout the website. We have a navigation bar with buttons that will link the user to various sections of the site. We have a home button that can instantaneously bring the user back to the index page from anywhere on the website. We see a drop down list that the user can select a category of story to read. We see the story's laid out in a grid fashion. The use will be able to click on any of the stories in the grid and they will be taken to a page that displays that story.
 
-![](assets/readme/creative.png)
+![Main Page](readme_files/main.png)
 
-*Image 1. The Creative theme*
+*Image... Main index page*
 
-Image of Stripe payments made sucsessfully
+**Login page wireframe**
 
-aaa
-**Portfolio Item**
+Here we see a typical login dialogue. There is a password field and a username field along with instructions for the user. Note the social media links section in the footer.
 
-A simple portfolio item details page example built with Bootstrap 4. Used for dedicated item screen.
+![Login Page](readme_files/login.png)
 
-[https://startbootstrap.com/snippets/portfolio-item/](https://startbootstrap.com/snippets/portfolio-item/)
+*Image... login page*
 
-![](assets/readme/portfolio.png)
+**Submit a story page wireframe**
 
-*Image 1. The Portfolio template*
+This is what the user should see should they be logged in and click the "submit a story" button. There are various fields for the user to fill out such as the title of the story as well as the users name that will be the author of the story. The user also should have the choice of four category's for their story. This category will be used to sort the story's on the main page.
+
+![Submit Page](readme_files/submit.png)
+
+*Image... submit a story page*
+
+**Must register page wireframe**
+
+Here we see what should happen should a user try to submit a story without being a member of the website. The user should be conveniently linked to the registration page should they see this message.
+
+![Must Reg Page](readme_files/mustreg.png)
+
+*Image... must register page*
+
+**Donate page wireframe**
+
+The user should be informed that their contribution is appreciated. There should also be minimal barriers in the way of a user making a payment. It should be simple and fast. Note the credit card details field as well as the security fields such as CVV and expiry date fields.
+
+![Donate Page](readme_files/donate.png)
+
+*Image... donate page*
 
 ## Features ##
 
@@ -61,26 +89,23 @@ A simple portfolio item details page example built with Bootstrap 4. Used for de
 - Browse as guest
 - Browse as member (allowing upload of content)
 - Make a donation to the running of the website
-
-## Technologies used ##
-
-## Testing ##
-
-Image of Stripe payments made successfully
-
-### Existing Features
-
-## Directory structure
-
-Describe the directory structure of the project with diagram
-
-### Features Left to Implement
+- Submit a story to the database
+- Read the story's of other members
+- Works well on both desktop and mobile devices
 
 ## Django Apps ##
 
-- Accounts
-- Story
-- Donate
+There are three main apps developed for the website that could be potentially used again in other projects.
+
+**Accounts**
+
+A heavily modified version of the Accounts app developed based on tutorials by the Code Institute. As the app was developed for Django 1, the main modifications revolve around updating syntax to target Django 2.
+
+**Donate**
+
+
+
+**Story**
 
 ## Models ##
 
@@ -99,13 +124,31 @@ Category's: Adventure, Fantasy, Mystery, SciFi
 
 ## Technologies Used
 
+**Accounts by Code Institute**
+
 The website utilises a heavily modified version of the "Accounts" Django app created by Code Institute as part of the tutorial series "Authentication and Authorisation". 
 
 [https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation](https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation)
 
+**Stripe 'checkout.js'**
+
+Checkout.js by Stripe encapsulated much of the payment functionality used to create the 'Donate' button. 
+
+The following tutorial by William Vincent provided inspiration for payment integration on this website:
+
+[https://testdriven.io/blog/django-stripe-tutorial/](https://testdriven.io/blog/django-stripe-tutorial/)
+
 **Forms Bootstrap**
 
+Many of the forms used throughout the website were styled and implemented using forms-bootstrap.
+
+To install it, use 'pip3 install forms-bootstrap'
+
 **Whitenoise**
+
+Whitenoise middleware was used to provide a simple static file hosting solution on the production build of the website.
+
+To install it, use 'pip3 install whitenoise'
 
 **Django**
 
@@ -116,6 +159,10 @@ Version: 3.0.3
 [https://www.djangoproject.com/](https://www.djangoproject.com/)
 
 **Visual Studio Code**
+
+A full featured IDE for use with many languages and frameworks
+
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 **Languages**
 
@@ -129,13 +176,19 @@ To retouch product photographs.
 
 **Travis**
 
+Continuous integration testing was carried out with the aid of Travis
+
 [https://travis-ci.com/](https://travis-ci.com/)
 
 **Stripe**
 
+All payment functionality for this website is handled by the Stripe payment service.
+
 [https://stripe.com/](https://stripe.com/)
 
 **GitHub**
+
+Version control was handled through the integrated Git features on VSCode. Code hosting was provided by GitHub.
 
 [https://github.com/](https://github.com/)
 
@@ -149,37 +202,43 @@ Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) 
 
 **Gunicorn**
 
-**Django-forms-bootstrap**
+Green Unicorn is a WSGI server used to host the production build.
 
-**Modified accounts app based on Code Institute tutorial**
+[https://gunicorn.org/](https://gunicorn.org/)
 
-**Pillow**
+**Shop Homepage theme**
 
-**VSCode**
+The main layout of the site is acheived through the use of the Shop Homepage theme from Start Bootstrap.
+
+[https://startbootstrap.com/templates/shop-homepage/](https://startbootstrap.com/templates/shop-homepage/)
 
 **Chrome**
 
-**Web validator**
+Main web browser used for development.
 
-**Travis**
+[https://www.google.com/chrome/](https://www.google.com/chrome/)
+
+**Web validator**
 
 **Heroku**
 
-**Whitenoise**
+The server of choice for hosting the production build.
 
-**Git and GitHub**
-
-**Python3, Javascript, CSS, HTML5, Django 2**
+[https://www.heroku.com](https://www.heroku.com)
 
 **SQLite3**
 
+Provided with Django, this simple database solution was used for development as well as initial production deployment. Note that it is not suitable for long term deployment.
+
+[https://www.sqlite.org](https://www.sqlite.org)
+
 **Pencil**
 
+Prototyping program used to create the early wireframes.
+
+[https://pencil.evolus.vn/](https://pencil.evolus.vn/)
+
 ## Testing
-
-**Continuous testing with Travis**
-
-
 
 **Testing models with Django test framework**
 
@@ -229,6 +288,10 @@ Test 4. Donate page tests
 16. The payment should be processed
 17. The user should be redirected to a 'thank you' page
 
+![Stripe Payments Screenshot](readme_files/stripepayments.png)
+
+*Image... Screenshot of Stripe.com showing successful payments.*
+
 Test 5. Login / Register tests
 
 1. Visit the website
@@ -263,7 +326,7 @@ Test 6 Submit page tests
 14. Click the category selector for the category of the story input in step 9
 15. The story should no be available for reading
 
-**Testing the store on various devices / emulators / browsers**
+**Testing on various devices / emulators / browsers**
 
 **Bugs found / issues**
 
@@ -290,7 +353,7 @@ Here are the steps required to run this website with the VSCode IDE
 14. Now go to a browser and type the address 'localhost:8000/admin'
 15. You can now log in and manipulate the database from Django's admin software
 
-**How the website was deployed on Heroku**
+**Running the website on Heroku**
 
 * Gunicorn
 * Explain the contents of the procfile
@@ -304,11 +367,13 @@ Here are the steps required to run this website with the VSCode IDE
 
 ## Sources of information
 
-Django documentation v3.0:
+**Django documentation v3.0:**
 
 [https://docs.djangoproject.com/en/3.0/](https://docs.djangoproject.com/en/3.0/)
 
-Code Institute tutorials....
+**Code Institute tutorials.**
+
+[www.codeinstitute.net/](www.codeinstitute.net/)
 
 **Start Bootstrap**
 
@@ -320,13 +385,11 @@ Theme templates.
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
-- The photos used in this site were obtained from ...
 
-### Acknowledgements
+All photographs used on the website were obtained from Google Images under free free use terms.
 
-- I received inspiration for this project from X
+[https://www.google.com/advanced_image_search](https://www.google.com/advanced_image_search)
 
-# TODO / Notes
+The example stories used on the website were obtained with permission from FanFiction.net
 
-* Change DEBUG = True in Django settings file to False
-* Add a tonne of tests in tests.py on the models
+[https://www.fanfiction.net/](https://www.fanfiction.net/)
