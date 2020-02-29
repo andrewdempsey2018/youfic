@@ -103,24 +103,23 @@ A heavily modified version of the Accounts app developed based on tutorials by t
 
 **Donate**
 
-
+Handles payment functionality. Makes use of checkout.js to render the payment form.
 
 **Story**
+
+Renders all of the story thumbnails, deals with sorting the story's into categories. Also displays individual story's for reading by the user.
 
 ## Models ##
 
 **Story:**
+
 title (CharField)
 author (CharField)
 description (TextField)
 image (ImageField)
-category (CharField)
+category (CharField, Adventure, Fantasy, Mystery, SciFi)
 text (TextField)
 published (DateTimeField)
-
-Category's: Adventure, Fantasy, Mystery, SciFi
-
-## Key code explanations ##
 
 ## Technologies Used
 
@@ -218,8 +217,6 @@ Main web browser used for development.
 
 [https://www.google.com/chrome/](https://www.google.com/chrome/)
 
-**Web validator**
-
 **Heroku**
 
 The server of choice for hosting the production build.
@@ -239,10 +236,6 @@ Prototyping program used to create the early wireframes.
 [https://pencil.evolus.vn/](https://pencil.evolus.vn/)
 
 ## Testing
-
-**Testing models with Django test framework**
-
-Details of the test cases on Story model
 
 **Functional testing**
 
@@ -344,8 +337,6 @@ The site running on an android phone (emulated):
 
 *Image... Samsung Galaxy rendering the website*
 
-**Bugs found / issues**
-
 ## Deployment
 
 **Running the website locally**
@@ -371,8 +362,16 @@ Here are the steps required to run this website with the VSCode IDE
 
 **Running the website on Heroku**
 
-* Gunicorn
-* Explain the contents of the procfile
+To deploy to Heroku, the following steps were taken.
+
+1. Gunicorn was installed as the WSGI webserver.
+2. Whitenoise was installed to handle static files.
+3. Environment variables were taken out of the source code and put into a separate file.
+4. An app was created on Heroku called 'youfic'
+5. This app was linked to the YouFic GitHub repository.
+6. The app was set to automatically deploy upon each GitHub commit.
+7. Environment variables were added to the settings page on the Heroku app.
+8. Media root and static root constants were set-up to reflect the static and media directory's of the project directory structure. This allowed the media files to be found by referencing the static root in code.
 
 ## Credits
 
@@ -396,9 +395,6 @@ Here are the steps required to run this website with the VSCode IDE
 Theme templates.
 
 [https://startbootstrap.com/](https://startbootstrap.com/)
-
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 ### Media
 
